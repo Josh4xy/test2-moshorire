@@ -1,37 +1,71 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student Score Checker</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <h1>Student Score Checker</h1>
+    <div class="card">
+      <h1>Student Score Checker</h1>
+      <p class="description">
+        Enter your name and their scores to see the result.
+      </p>
 
-    <label>Student Name:</label>
-    <input type="text" id="studentName" />
+      <!-- Student name section -->
+      <div class="form-section">
+        <label for="studentName">Student Name</label>
+        <input type="text" id="studentName" placeholder="Oshodi Moshorire" />
+      </div>
 
-    <br /><br />
+      <!-- HTML score section -->
+      <div class="form-section">
+        <label for="htmlScore">HTML Score</label>
+        <input
+          type="number"
+          id="htmlScore"
+          placeholder="0 – 100"
+          min="0"
+          max="100"
+        />
+      </div>
 
-    <label>HTML Score:</label>
-    <input type="number" id="htmlScore" />
+      <!-- CSS score section -->
+      <div class="form-section">
+        <label for="cssScore">CSS Score</label>
+        <input
+          type="number"
+          id="cssScore"
+          placeholder="0 – 100"
+          min="0"
+          max="100"
+        />
+      </div>
 
-    <br /><br />
+      <!-- JavaScript score section -->
+      <div class="form-section">
+        <label for="javascriptScore">JavaScript Score</label>
+        <input
+          type="number"
+          id="javascriptScore"
+          placeholder="0 – 100"
+          min="0"
+          max="100"
+        />
+      </div>
 
-    <label>CSS Score:</label>
-    <input type="number" id="cssScore" />
+      <!-- Button section -->
+      <div class="action-section">
+        <button onclick="checkResult()">Check Result</button>
+      </div>
 
-    <br /><br />
-
-    <label>JavaScript Score:</label>
-    <input type="number" id="javascriptScore" />
-
-    <br /><br />
-
-    <button onclick="checkResult()">Check Result</button>
-
-    <h2 id="result"></h2>
+      <!-- Result section -->
+      <div class="result-section">
+        <h2 id="result"></h2>
+      </div>
+    </div>
 
     <script src="proj.js"></script>
   </body>
